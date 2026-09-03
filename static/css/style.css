@@ -32,7 +32,8 @@ h1, .brand {
 }
 
 .site-header {
-    border-bottom: 1px solid var(--line);
+    border-bottom: 2px solid var(--ink);
+    background-color: var(--paper);
 }
 
 .site-header .container {
@@ -58,10 +59,35 @@ h1, .brand {
     color: var(--ink);
     text-decoration: none;
     font-size: 0.95rem;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.site-header nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.4rem;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: width 0.2s ease;
+}
+
+.site-header nav a:hover {
+    color: var(--accent-dark);
+}
+
+.site-header nav a:hover::after {
+    width: 100%;
 }
 
 .hero {
-    padding: 4.5rem 0 5rem;
+    padding: 6rem 0 7rem;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(217, 93, 57, 0.12), transparent 25%),
+        var(--paper);
 }
 
 .hero-grid {
@@ -91,8 +117,10 @@ h1, .brand {
 }
 
 .hero-identity h1 {
-    font-size: clamp(3rem, 7vw, 5rem);
-    line-height: 0.95;
+    font-size: clamp(3.2rem, 8vw, 6rem);
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    max-width: 650px;
 }
 
 .bio {
@@ -165,8 +193,13 @@ h1, .brand {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: var(--radius);
+    border-radius: 12px;
     border: 3px solid var(--ink);
+    transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+    transform: translate(-6px, -6px);
 }
 
 .site-footer {
@@ -174,6 +207,76 @@ h1, .brand {
     color: var(--text-muted);
     font-size: 0.85rem;
     border-top: 1px solid var(--line);
+}
+
+.education {
+    padding: 6rem 0 7rem;
+    background-color: var(--ink);
+    color: var(--paper);
+}
+
+.education .section-kicker {
+    color: var(--accent);
+}
+
+.education h2 {
+    font-family: "Space Grotesk", -apple-system, sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    line-height: 1;
+    margin-bottom: 3rem;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+.education-card {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    border: none;
+    border-top: 1px solid rgba(250, 246, 240, 0.25);
+    border-radius: 0;
+    background-color: transparent;
+    transition: padding-left 0.25s ease;
+}
+
+.education-card:last-child {
+    border-bottom: 1px solid rgba(250, 246, 240, 0.25);
+}
+
+.education-card:hover {
+    transform: none;
+    box-shadow: none;
+    padding-left: 1rem;
+}
+
+.education-card h3 {
+    grid-column: 2;
+    grid-row: 1;
+    font-family: "Space Grotesk", -apple-system, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.35rem;
+}
+
+.education-card p {
+    grid-column: 2;
+    grid-row: 2;
+    color: #c8c0b5;
+    margin-bottom: 0;
+}
+
+.education-card span {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    align-self: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.03em;
 }
 
 @media (max-width: 600px) {
@@ -191,5 +294,30 @@ h1, .brand {
 
     .social-links {
         justify-content: flex-start;
+    }
+
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+        .education-card {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        padding: 1.5rem 0;
+    }
+
+    .education-card h3 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .education-card p {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .education-card span {
+        grid-column: 1;
+        grid-row: 1;
     }
 }
