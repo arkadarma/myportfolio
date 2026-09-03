@@ -1,14 +1,83 @@
-Nama : I Komang Arka Darma Laksana
+# My Portfolio
 
-NPM : 2506656791
+Website portfolio pribadi yang dibuat menggunakan HTML5, CSS3, dan Django. Website ini berisi informasi profil pribadi dan riwayat pendidikan.
 
-Kelas : PBP D
+## Identitas
 
+- Nama: I Komang Arka Darma Laksana
+- NPM: 2506656791
+- Kelas: PBP D
+
+## Teknologi yang Digunakan
+
+- HTML5
+- CSS3
+- Django
+- Git dan GitHub
 
 ### Tugas 1
 
-1. Pada website portfolio saya, saya menggunakan beberapa elemen semantik HTML5 seperti `<header>`, `<main>`, `<section>`, dan `<footer>`. Saya menggunakan `<section>` untuk memisahkan bagian Profile dan Education agar struktur halaman lebih terorganisir dan mudah dipahami. Saya juga menggunakan `<article>` untuk setiap riwayat pendidikan pada bagian Education.
+1. Pada website portfolio saya, saya menggunakan elemen semantik HTML5 seperti `<header>`, `<main>`, `<section>`, `<article>`, dan `<footer>`. Saya menggunakan `<section>` untuk memisahkan bagian Profile dan Education karena kedua bagian tersebut memiliki jenis informasi yang berbeda. Saya juga menggunakan `<article>` untuk setiap riwayat pendidikan karena setiap riwayat dapat dianggap sebagai satu informasi yang berdiri sendiri. Penggunaan elemen semantik membantu membuat struktur HTML lebih terorganisir dan mudah dipahami. Selain itu, struktur tersebut membuat kode lebih mudah dibaca dan memudahkan pengembangan ketika website nantinya memiliki bagian atau konten tambahan.
 
-2. Tantangan yang saya temukan ketika membuat website responsive adalah mengatur tata letak agar tetap rapi pada ukuran layar yang berbeda. Pada tampilan desktop, bagian Education menggunakan CSS Grid sehingga tiga riwayat pendidikan dapat ditampilkan dengan rapi. Ketika ukuran layar diperkecil, saya menggunakan media query untuk mengubah layout menjadi satu kolom agar setiap informasi tetap mudah dibaca dan tidak keluar dari layar.
+2. Tantangan utama yang saya temukan ketika membuat CSS responsive adalah mempertahankan struktur dan keterbacaan halaman ketika ukuran layar berubah dari desktop ke mobile. Pada tampilan desktop, beberapa informasi dapat ditempatkan secara berdampingan karena tersedia ruang yang lebih luas. Namun, pada mobile, layout tersebut dapat menjadi terlalu sempit sehingga susunan elemen perlu disesuaikan. Saya mengevaluasi setiap elemen berdasarkan ukuran dan kepentingannya pada halaman. Elemen yang berisi informasi utama saya prioritaskan agar tetap mudah dibaca, sedangkan layout yang sebelumnya horizontal saya ubah menjadi lebih sederhana dan vertikal menggunakan media query. Dari proses ini saya memahami bahwa responsive design tidak hanya mengubah ukuran elemen, tetapi juga menyesuaikan posisi dan struktur layout dengan ukuran layar.
 
-3. Karena website yang dibuat masih berupa static web, informasi di dalam website masih harus ditulis dan diubah secara langsung melalui kode HTML. Website juga belum dapat menyimpan atau mengelola data pengguna secara dinamis. Pada iterasi berikutnya, saya ingin menambahkan database dan fitur dinamis agar data portfolio dapat dikelola dan diperbarui dengan lebih mudah.
+3. Karena website yang dibuat masih berupa static web, salah satu keterbatasannya adalah informasi portfolio masih ditulis secara langsung di dalam kode. Jika saya ingin mengubah data pendidikan atau menambahkan informasi baru, saya perlu mengubah file HTML atau template secara manual. Website juga belum memiliki database dan fitur pengelolaan data sehingga konten belum dapat diperbarui secara dinamis. Pada iterasi berikutnya, saya ingin menggunakan database Django untuk menyimpan informasi portfolio seperti pendidikan dan project. Dengan begitu, data dapat dikelola secara lebih terstruktur dan ditampilkan secara dinamis tanpa harus mengubah template setiap kali terdapat perubahan informasi.
+
+## AI Disclosure
+
+Dalam pengerjaan Tugas 1 ini, saya menggunakan ChatGPT sebagai alat bantu pembelajaran, debugging, dan pemahaman konsep.
+
+AI saya gunakan untuk membantu:
+
+- memahami struktur HTML5 dan penggunaan elemen semantik;
+- memahami konsep CSS responsive design;
+- menganalisis masalah pada tampilan website;
+- memahami struktur project Django;
+- memahami penggunaan Git, branch, commit, dan remote;
+- membantu proses deployment project ke PWS;
+- memahami instruksi dan rubrik tugas;
+- membantu menyusun dan memperbaiki dokumentasi README.
+
+AI tidak saya gunakan sebagai pengganti proses pengujian. Setelah mendapatkan penjelasan atau saran, saya menerapkannya pada project dan melakukan pengujian secara langsung pada browser, GitHub, dan PWS. Jika hasilnya belum sesuai dengan yang diinginkan, saya melakukan penyesuaian kembali terhadap kode.
+
+### Strategi Prompting
+
+Saya menggunakan prompting secara bertahap sesuai dengan masalah yang saya temukan selama pengerjaan. Ketika mengalami kesulitan, saya memberikan konteks berupa kode, screenshot, atau penjelasan mengenai kondisi yang terjadi, kemudian meminta AI untuk menjelaskan penyebab masalah dan memberikan langkah penyelesaian.
+
+Jika solusi yang diberikan belum berhasil, saya memberikan hasil terbaru kepada AI dan meminta analisis lebih lanjut. Dengan cara tersebut, saya menggunakan AI sebagai alat bantu untuk memahami proses pemecahan masalah, bukan hanya meminta AI menghasilkan keseluruhan project.
+
+### Bagian yang Dibantu AI
+
+Bagian yang dibantu AI meliputi pemahaman struktur kode HTML, CSS, dan Django, debugging layout responsive, penggunaan Git dan branching, serta proses deployment ke PWS.
+
+Dalam proses Git, AI membantu saya memahami cara memisahkan pekerjaan Tugas 1 dari Tutorial 1 menggunakan branch `tugas-1`. Dalam proses deployment, AI membantu saya memahami cara mengirim branch tersebut ke repository PWS dan melakukan deployment melalui PWS.
+
+### Log Prompting
+Beberapa contoh prompt yang saya gunakan selama pengerjaan :
+
+1. Meminta penjelasan mengenai struktur kode dan hubungan antar file pada project.
+2. Meminta penjelasan mengenai penggunaan elemen semantik HTML5 seperti `<section>` dan `<article>`.
+3. Meminta bantuan memahami dan memperbaiki layout responsive menggunakan CSS.
+4. Meminta bantuan ketika tampilan website belum sesuai dengan desain yang diinginkan.
+5. Meminta penjelasan mengenai penggunaan branch Git untuk memisahkan Tugas 1 dari Tutorial 1.
+6. Meminta bantuan melakukan deployment branch `tugas-1` ke PWS.
+7. Meminta bantuan memahami instruksi dan rubrik tugas serta memperbaiki dokumentasi README.
+
+Percakapan dengan AI digunakan sebagai referensi selama proses pengerjaan, sedangkan implementasi akhir tetap saya terapkan, jalankan, dan uji sendiri pada project.
+
+### Keterbatasan dan Evaluasi Penggunaan AI
+
+Saya menyadari bahwa jawaban dari AI tidak selalu dapat langsung diterapkan ke dalam project. Beberapa solusi yang diberikan perlu disesuaikan dengan struktur kode dan kondisi project yang saya gunakan. Karena itu, saya tidak langsung menganggap solusi dari AI sebagai solusi akhir.
+
+Saya melakukan pengecekan secara manual dengan menjalankan website, melihat hasil perubahan pada browser, dan memeriksa kembali kode yang digunakan. Ketika solusi AI belum menghasilkan tampilan atau perilaku yang sesuai, saya melakukan perubahan pada kode dan mencoba kembali sampai mendapatkan hasil yang sesuai dengan kebutuhan tugas.
+
+Menurut saya, penggunaan AI paling membantu ketika digunakan untuk menjelaskan konsep dan membantu menemukan kemungkinan penyebab masalah. Namun, pemahaman terhadap kode dan pengujian tetap diperlukan agar solusi yang digunakan benar-benar sesuai dengan project.
+
+### Progress Pengerjaan
+
+Pengerjaan Tugas 1 dilakukan secara bertahap. Saya mulai dengan memahami struktur project dari Tutorial 01, kemudian menambahkan bagian Education dan menyesuaikan struktur HTML menggunakan elemen semantik. Setelah itu saya mengembangkan tampilan menggunakan CSS dan menyesuaikannya agar responsive pada ukuran layar yang berbeda.
+
+Setelah implementasi selesai, saya melakukan pengujian pada browser dan melakukan perbaikan terhadap tampilan. Saya kemudian menggunakan Git untuk memisahkan pekerjaan Tugas 1 ke branch `tugas-1`, melakukan commit, dan melakukan deployment hasil akhir ke PWS.
+
+Penggunaan branch `tugas-1` juga membantu menjaga hasil Tutorial 01 tetap terpisah dari perubahan yang dibuat untuk Tugas 1.
+
